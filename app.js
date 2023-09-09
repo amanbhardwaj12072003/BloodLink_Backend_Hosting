@@ -26,10 +26,10 @@ mongoose.connect(
   }
 );
 
-app.use("/auth", require("./routers/authRouter"));
-app.use("/user", require("./routers/userRouter"));
-app.use("/bank", require("./routers/bankRouter"));
-app.use("/camps", require("./routers/campRouter"));
+app.use("/api/auth", require("./routers/authRouter"));
+app.use("/api/user", require("./routers/userRouter"));
+app.use("/api/bank", require("./routers/bankRouter"));
+app.use("/api/camps", require("./routers/campRouter"));
 
 app.listen(port, () =>
   console.log(`Server running at http://localhost:${port}`)
