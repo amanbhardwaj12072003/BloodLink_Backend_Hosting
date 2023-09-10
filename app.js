@@ -13,7 +13,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://bloodlink-com.onrender.com"],
+    origin: ["*"],
     credentials: true,
   })
 );
