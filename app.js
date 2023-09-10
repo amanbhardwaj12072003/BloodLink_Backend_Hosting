@@ -26,6 +26,11 @@ mongoose.connect(
   }
 );
 
+app.use((req,res,next)=>{
+  console.log(req.method , req.url);
+  next();
+})
+
 app.use("/auth", require("./routers/authRouter"));
 app.use("/user", require("./routers/userRouter"));
 app.use("/bank", require("./routers/bankRouter"));
